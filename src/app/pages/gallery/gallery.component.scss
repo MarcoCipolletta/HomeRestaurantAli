@@ -1,0 +1,29 @@
+:host {
+  margin-bottom: 2rem;
+}
+
+ngb-carousel {
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+}
+.picsum-img-wrapper {
+  height: 85vh;
+  width: 100%;
+
+  @media screen and (max-width: 991px) {
+    height: 80vh;
+  }
+  @media screen and (max-width: 767px) {
+    height: 75vh;
+  }
+  @media screen and (max-width: 575px) {
+    height: 52.5vh;
+  }
+
+  img {
+    width: 100%; /* Riempie tutta la larghezza */
+    height: 100%;
+    object-fit: contain;
+  }
+}

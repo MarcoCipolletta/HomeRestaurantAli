@@ -1,0 +1,308 @@
+.hero {
+  height: calc(100vh - 74.5px);
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 2;
+  }
+  h3 {
+    color: white;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    z-index: 3;
+    line-height: 2.75rem;
+    font-weight: 300;
+  }
+
+  .bookBtn {
+    position: absolute;
+    font-size: 1.25rem;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1.5rem;
+    overflow: hidden;
+  }
+  .rippleBtn {
+    span {
+      transition: all 0.6s ease-in-out;
+      display: inline-block;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: var(--y);
+      left: var(--x);
+      border-radius: 50%;
+      width: 0;
+      height: 0;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.2);
+
+      transition: all 0.6s ease-in-out;
+    }
+  }
+
+  .rippleBtn:hover {
+    span {
+      transform: scale(1.1);
+    }
+    &::before {
+      width: 450px;
+      height: 450px;
+    }
+  }
+}
+.filosofy {
+  height: calc(100vh - 74.5px);
+  @media screen and (max-width: 991px) {
+    height: inherit;
+    text-align: center;
+  }
+  .plate1 {
+    height: 100%;
+    @media screen and (max-width: 991px) {
+      height: 355px;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .textFilosofy {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline-start: 5rem;
+    padding-inline-end: 7.5rem;
+    @media screen and (max-width: 991px) {
+      padding-inline: 5rem;
+    }
+    @media screen and (max-width: 767px) {
+      padding-inline: 3.5rem;
+    }
+    @media screen and (max-width: 575px) {
+      padding-inline: 1.5rem;
+    }
+    h6 {
+      font-size: 1.75rem;
+      margin-bottom: 3rem;
+    }
+    p {
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+    a {
+      align-self: flex-start;
+      position: relative;
+      @media screen and (max-width: 991px) {
+        align-self: inherit;
+      }
+      transition: all 0.3s ease-in-out;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: #2e2e2e;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.aboutChef {
+  height: calc(100vh - 74.5px);
+  @media screen and (max-width: 991px) {
+    height: inherit;
+  }
+  .imgChef {
+    height: 100%;
+    @media screen and (max-width: 991px) {
+      height: 355px;
+      order: 5;
+      img {
+        object-position: top;
+      }
+    }
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .textChef {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: end;
+    padding-inline-start: 7.5rem;
+    padding-inline-end: 5rem;
+    @media screen and (max-width: 991px) {
+      text-align: center;
+      padding-inline: 5rem;
+    }
+    @media screen and (max-width: 767px) {
+      padding-inline: 3.5rem;
+    }
+    @media screen and (max-width: 575px) {
+      padding-inline: 1.5rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    h6 {
+      font-size: 1.75rem;
+      margin-bottom: 3rem;
+    }
+    p {
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+    a {
+      align-self: flex-end;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      @media screen and (max-width: 991px) {
+        align-self: inherit;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 1px;
+        background-color: #000000;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.review {
+  text-align: center;
+  h3 {
+    margin-block: 4rem 7.5rem;
+    @media screen and (max-width: 575px) {
+      font-size: calc(1.475rem + 1.7vw);
+    }
+  }
+  .quote {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 8.5rem;
+    @media screen and (max-width: 1199px) {
+      padding-inline: 6.5rem;
+    }
+    @media screen and (max-width: 992px) {
+      padding-inline: 4.5rem;
+    }
+    @media screen and (max-width: 575px) {
+      padding-inline: 2.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    blockquote {
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: #605f5f;
+    }
+  }
+}
+.bookBtnf.rippleBtnf {
+  margin-block: 7.5rem;
+  position: relative;
+  display: inline-block;
+  font-size: 1.25rem;
+  color: black;
+  border: 1px solid black;
+  padding: 0.5rem 1.5rem;
+  overflow: hidden;
+}
+.rippleBtnf {
+  span {
+    transition: all 0.6s ease-in-out;
+    display: inline-block;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    background: rgba(105, 105, 105, 0.25);
+    overflow: hidden;
+    transition: all 0.6s;
+    z-index: -1;
+  }
+}
+
+.rippleBtnf:hover {
+  span {
+    transform: scale(1.1);
+  }
+  &::before {
+    width: 450px;
+    height: 450px;
+  }
+}

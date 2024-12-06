@@ -1,0 +1,10 @@
+@if (toastSvc.toast) {
+<ngb-toast
+  [class]="toastSvc.toast.classname"
+  [autohide]="true"
+  [delay]="toastSvc.toast.delay || 500000"
+  (hidden)="toastSvc.remove()"
+>
+  <ng-template [ngTemplateOutlet]="toastSvc.toast.template"></ng-template>
+</ngb-toast>
+}

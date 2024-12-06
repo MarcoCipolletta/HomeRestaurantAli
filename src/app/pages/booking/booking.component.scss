@@ -1,0 +1,125 @@
+.introduction {
+  font-size: 1.1rem;
+  a {
+    color: #605f5f;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #605f5f;
+      transition: width 0.3s ease-in-out;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      margin-bottom: 0.5rem;
+      padding: 0.3rem 1.5rem;
+      border: 1px solid #605f5f;
+      cursor: pointer;
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: #000;
+      color: #fff;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+  }
+}
+.people {
+  display: flex;
+  padding: 0 0 1.5rem 0;
+  justify-content: space-between;
+  align-items: center;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      margin-bottom: 0.5rem;
+      padding: 0.3rem 1rem;
+      border: 1px solid #605f5f;
+      cursor: pointer;
+    }
+
+    input[type="radio"]:checked + label {
+      background-color: #000;
+      color: #fff;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+  }
+}
+input[type="email"],
+input[type="text"],
+input[type="tel"] {
+  border: none;
+  border-bottom: 1px solid #605f5f;
+  border-radius: 0;
+  padding: 0.5rem 0.25rem;
+  background-color: transparent;
+  width: 100%;
+  color: #605f5f;
+  &::placeholder {
+    color: #605f5f;
+  }
+  outline: none;
+}
+
+input[type="text"] {
+  text-transform: capitalize;
+  &::placeholder {
+    text-transform: initial;
+  }
+}
+
+.bookBtn {
+  margin-block: 1.5rem;
+  border: none;
+  color: #000;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.3s ease-in-out;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
+.isLoading {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
